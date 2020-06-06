@@ -2,7 +2,7 @@
 Paper on the Gemma Framework (https://gemma.msl.ubc.ca/home.html)
 
 ## Software Dependencies:
-- Python Environment (pyenv)
+- Pyenv (1.2.16-5)
 - Java (OpenJDK, 1.8.0)
 - Python 3 (3.7.5)
 - Jython 2 (2.7.1)
