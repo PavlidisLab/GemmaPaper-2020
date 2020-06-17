@@ -69,7 +69,7 @@ metadataFileHandle.write('\t'.join(metaHeader) + '\n')
 print('Generating Platform Metadata.')
 adList = platformService.loadAllValueObjects()
 
-for adIndex, advo in enumerate(adList):
+for advo in adList:
 	ad = platformService.load(advo.id)
 
 	# Load Gene Type Dictionary

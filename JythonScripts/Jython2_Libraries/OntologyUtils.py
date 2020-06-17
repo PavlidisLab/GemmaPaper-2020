@@ -29,7 +29,7 @@ class BasicOntTerm(object):
 		assert isinstance(inputValue, str) or isinstance(inputValue, unicode) or inputValue is None
 		assert isinstance(inputURI, str) or isinstance(inputURI, unicode) or inputURI is None
 
-		tempValue = FormatASCII(inputValue).replace('\t', '').strip().replace('|', ',').replace(';', '')
+		tempValue = FormatASCII(inputValue).replace('\t', '').strip().replace('|', ',').replace(';', ',')
 		if tempValue != '':
 			self.termValue = tempValue
 
