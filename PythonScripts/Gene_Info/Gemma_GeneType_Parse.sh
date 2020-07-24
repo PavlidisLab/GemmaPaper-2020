@@ -3,7 +3,7 @@
 # ----- Initialize Environment -----
 # 1. Bash Settings
 export IN_DIR=''
-export SCRIPT_DIR=$HOME
+export SCRIPT_DIR=$HOME/
 export OUT_DIR=$HOME/Output/Dependencies/
 mkdir -p $OUT_DIR/GeneType/
 

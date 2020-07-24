@@ -48,13 +48,12 @@ tempGG = ggplot(tempDT, aes(x = ee.MedianCor)) +
 	ylab(expression('log'[10]*' # Datasets'))
 
 # [R1] Sample-Correlation -----
-# Mean, Mode, Range, N >= 0.9, N >= 0.98
+# Mean, Mode, Range, N >= 0.9
 reportVal_Mean_Cor = tempDT[, mean(ee.MedianCor, na.rm = TRUE)]
 reportVal_Mode_Cor = histDT$mids[which.max(histDT$counts)]
 reportVal_Min_Cor = tempDT[, min(ee.MedianCor, na.rm = TRUE)]
 reportVal_Max_Cor = tempDT[, max(ee.MedianCor, na.rm = TRUE)]
 reportVal_0.9_Cor = tempDT[ee.MedianCor >= 0.9, .N]
-reportVal_0.98_Cor = tempDT[ee.MedianCor >= 0.98, .N]
 
 # Value Formatting
 reportVal_Mean_Cor = sprintf('%.4f', reportVal_Mean_Cor)
@@ -103,7 +102,6 @@ cat(
 	sprintf('Cor (Mode): %s\n', reportVal_Mode_Cor),
 	sprintf('Cor (Range): %s - %s\n', reportVal_Min_Cor, reportVal_Max_Cor),
 	sprintf('# Datasets (Cor >= 0.9): %s\n', reportVal_0.9_Cor),
-	sprintf('# Datasets (Cor >= 0.98): %s\n', reportVal_0.98_Cor),
 	
 	sprintf('# Datasets (Outlier): %s\n', reportVal_N_Outlier),
 	sprintf('Outlier (Range): %s - %s\n', reportVal_Min_Outlier, reportVal_Max_Outlier),
